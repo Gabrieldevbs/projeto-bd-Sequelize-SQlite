@@ -1,0 +1,13 @@
+const path = require('path');
+
+module.exports = {
+    'config': path.resolve('./src/database/config', 'config.json'),
+    'models-path': path.resolve('./src/database/models'),
+    'seeders-path': path.resolve('./src/database/seeders'),
+    'migrations-path': path.resolve('./src/database/migrations'),
+
+}
+
+//Este arquivo serve para configurar o Sequelize CLI (Command Line Interface). 
+// Ele é essencial para que o Sequelize consiga encontrar os arquivos e diretórios importantes do seu projeto, 
+// como os arquivos de configuração, modelos, seeders e migrations.

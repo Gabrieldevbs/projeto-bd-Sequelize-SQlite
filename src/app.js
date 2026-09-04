@@ -8,6 +8,7 @@ const helmet = require('helmet');
 // Observação: os arquivos de rota estão no nível src/ neste esqueleto inicial
 const authRoutes = require('./routes_auth');
 const bookRoutes = require('./routes_books');
+const router = require('./routes');
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.get('/teste', (req, res) => {
   // Rota de teste simples para verificar se a API está no ar
   res.status(200).send({ mensagem: 'boas-vindas à API' });
 });
+router(app);
 
 // Rotas moduladas (auth, books)
 app.use(authRoutes);
